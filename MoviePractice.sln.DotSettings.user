@@ -2,5 +2,6 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=48e65a58_002D52e8_002D415c_002Db897_002D3c8e63c350a2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestMovieService" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::47F72E70-3CAD-34B5-68D3-2E80A818208E::net10.0::MoviePractice.Tests.TestMovieService&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::47F72E70-3CAD-34B5-68D3-2E80A818208E::net10.0::MoviePractice.Tests.TestMovieService&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

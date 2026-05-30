@@ -1,12 +1,11 @@
 ﻿namespace MoviePractice.Tests
 
 open Microsoft.VisualStudio.TestTools.UnitTesting
-open Xunit
 open MoviePractice.Library
 open MoviePractice.Library.MovieService.MovieService
 
 [<TestClass>]
-module TestMovieService() =
+type TestMovieService() =
 
     let movies: Movie list =
         [ { Title = "Titel"
@@ -15,6 +14,7 @@ module TestMovieService() =
             Duration = 96
             Genres = [ "Action"; "Sci-Fi" ]
             IsStreaming = true }
+
           { Title = "Neu"
             Year = 2025
             Rating = 9.1
@@ -23,14 +23,14 @@ module TestMovieService() =
             IsStreaming = false } ]
 
     [<TestMethod>]
-    let testGetTitles_1 () =
+    member this.TestGetTitles_1() =
         let result = getTitles movies
 
-        Assert.Equal<string list>([ "Titel"; "Neu" ], result)
+        CollectionAssert.AreEqual([| "Titel"; "Neu" |], result |> List.toArray)
 
     [<TestMethod>]
-    let testGetTitles_2 () =
+    member this.TestGetTitles_2() =
         let testMovies: Movie list = []
         let result = getTitles testMovies
 
-        Assert.Equal<string list>([], result)
+        CollectionAssert.AreEqual([||], result |> List.toArray)
