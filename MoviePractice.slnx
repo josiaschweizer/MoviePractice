@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MoviePractice.App/MoviePractice.App.fsproj" />
+  <Project Path="MoviePractice.Library/MoviePractice.Library.fsproj" />
+  <Project Path="MoviePractice.Tests/MoviePractice.Tests.fsproj" />
+</Solution>
