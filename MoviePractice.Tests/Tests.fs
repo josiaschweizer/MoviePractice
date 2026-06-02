@@ -34,3 +34,17 @@ type TestMovieService() =
         let result = getTitles testMovies
 
         CollectionAssert.AreEqual([||], result |> List.toArray)
+
+    [<TestMethod>]
+    member this.TestGetGenres_1() =
+        let result = getGenres movies
+
+        CollectionAssert.AreEqual([| "Action"; "Sci-Fi" |], result |> List.toArray)
+
+    member this.TestGetGenres_2() =
+        let testMovies: Movie list = []
+        let result = getGenres testMovies
+
+        CollectionAssert.AreEqual([||], result |> List.toArray)
+        
+    
